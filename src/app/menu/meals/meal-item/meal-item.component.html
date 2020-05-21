@@ -1,0 +1,27 @@
+<ion-item>
+  <ion-thumbnail slot="start">
+    <ion-img [src]="meal.imageUrl"></ion-img>
+  </ion-thumbnail>
+  <ion-label>
+    <div class="h11">
+      <h1>{{ meal.title }}</h1>
+    </div>
+    <div class="meals-details">
+      <ion-icon name="pricetag"></ion-icon>
+      <ion-text color="tertiary" class="space-left">{{ meal.price | currency: 'EUR'}}</ion-text>
+      <ion-buttons>
+        <ion-button (click)="decrementQty()">
+          <ion-icon name="remove-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-item>
+        <span>{{ meal.qty }}</span>
+      </ion-item>
+      <ion-buttons>
+        <ion-button (click)="incrementQty()">
+          <ion-icon name="add-circle" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </div>
+  </ion-label>
+</ion-item>

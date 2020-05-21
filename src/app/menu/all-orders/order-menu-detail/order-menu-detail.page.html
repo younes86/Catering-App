@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ orderm.creationDate }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Detail of this order</h1>
+  <p>the Date was at: {{ orderm.idtable }} 
+    {{ orderm?.items[0]?.imageUrl}}
+  </p>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-item>
+    <ion-thumbnail slot="start">
+      <ion-img [src]="orderm.items[0].imageUrl"></ion-img>
+    </ion-thumbnail>
+  </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

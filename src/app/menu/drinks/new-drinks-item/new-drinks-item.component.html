@@ -1,0 +1,12 @@
+<ion-item>
+  <ion-thumbnail slot="start">
+    <ion-img [src]="drink.imageUrl"></ion-img>
+  </ion-thumbnail>
+  <ion-label>
+    <h1>{{ drink.title }}</h1>
+    <div class="drinks-details">
+      <ion-icon name="pricetag"></ion-icon>
+      <ion-text color="tertiary" class="space-left">{{ drink.price | currency: 'EUR'}}</ion-text>
+    </div>
+  </ion-label>
+</ion-item>
